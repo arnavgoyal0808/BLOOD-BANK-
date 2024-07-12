@@ -2,7 +2,6 @@ import React , {useState} from 'react'
 import { useSelector } from 'react-redux';
 import InputType from '../forms/InputTypes'
 import API from '../../../services/API';
-import { toast } from 'react-toastify';
 
 
 const Modals = () => {

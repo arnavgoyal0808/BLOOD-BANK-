@@ -2,7 +2,6 @@ import React from 'react'
 import  { BiDonateBlood }  from "react-icons/bi"
 import { FaUserCircle } from "react-icons/fa";
 import {useNavigate} from "react-router-dom";
-import { toast } from 'react-toastify';
 
 
 const Header = () => {
@@ -10,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate()
   const Logouthandle = () => {
     localStorage.clear();
-    toast.success("user logout successfully");
+    
     navigate('/login');
     
   };

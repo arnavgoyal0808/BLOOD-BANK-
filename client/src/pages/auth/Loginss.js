@@ -2,13 +2,12 @@ import React, { useEffect } from 'react';
 import Form from '../../components/shared/forms/Formss';
 import { useSelector } from 'react-redux';
 import Spinners from '../../components/shared/Spinnerss';
-import { toast } from 'react-toastify';
 
 const Login = () => {
   const { loading, error } = useSelector(state => state.auth);
   useEffect(() => {
     if (error) {
-      toast.error(error); // Display the error using toast
+       // Display the error using toast
     }
   }, [error]); // Run the effect whenever the error changes
   

@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import API from "../../../services/API";
-import {  toast } from 'react-toastify';
   
 
 
@@ -12,7 +11,6 @@ export const  userLogin =  createAsyncThunk(
 
             if(data.success){
                 localStorage.setItem('token' , data.token)
-                toast.success(data.message);
                 window.location.replace('/');
                 return data;
             }
@@ -42,7 +40,6 @@ export const userRegister = createAsyncThunk(
             const {data} = await API.post('/auth/register' ,{name , role , email , password ,organisationName , hospitalName, website, address ,phone});
             if(data.success){
                 
-                toast.success('user registered successfully')
                 window.location.replace('/login');
             }
             return data;
